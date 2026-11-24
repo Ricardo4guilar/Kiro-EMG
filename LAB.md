@@ -33,15 +33,15 @@ En cada fase usa `egm-elephant` en el espacio de trabajo del laboratorio. Da la 
 
 | Fase | Mensaje para Elephant | Evidencia esperada |
 | --- | --- | --- |
-| Contexto | «Lee `LAB.md` y el workspace. Resume hechos, decisiones y preguntas abiertas. No diseñes ni implementes.» | Resumen que identifica un proyecto nuevo sin código. |
-| Brainstorm | «Usa `egm-brainstorm` con `LAB.md`. Evalúa alternativas pequeñas y casos límite. Pregunta solo lo indispensable y guarda un concept brief en `docs/egm/briefs/`. Detente.» | Brief con alcance, decisiones y preguntas abiertas. |
-| Draft | «Usa `egm-draft` con el brief aprobado para producir un diseño autocontenido en `docs/designs/`. Incluye requisitos identificados, decisiones, formato de datos, errores, criterios de aceptación y pruebas. No escribas código.» | Diseño que permite verificar cada función y caso límite. |
-| Review | «Invoca cinco veces a `egm-goldfish` con contexto nuevo: requisitos, arquitectura, seguridad y datos, operaciones, implementación y pruebas. Entrega a cada uno solo el diseño, `LAB.md`, el estándar pertinente y su alcance. Guarda cinco informes distintos en `docs/egm/reviews/`. No corrijas todavía el diseño.» | Cinco invocaciones visibles y cinco informes independientes. |
-| Resolve | «Usa `egm-resolve` para clasificar cada hallazgo como aceptado, rechazado con motivo, aplazado o pendiente. Propón los cambios y actualiza el diseño tras mis decisiones. Detente antes de aprobar.» | Registro de resolución y diseño revisado. |
-| Aprobación | **La persona** lee el diseño revisado y, si está conforme, escribe: «Apruebo el diseño `[ruta]` para este laboratorio». | Aprobación explícita; una respuesta de Goldfish no cuenta. |
-| Kiro Specs | «A partir del diseño aprobado, crea requisitos, diseño y tareas en `.kiro/specs/`. Mapea requisitos a criterios de aceptación y tareas. No implementes aún.» | Specs trazables al diseño. |
-| Implementación | «Implementa una tarea aprobada a la vez. Ejecuta pruebas de los casos de aceptación y reporta archivos y resultados.» | CLI funcional y pruebas con resultados. |
-| Drift | «Usa `egm-drift-report` para comparar el diseño aprobado, los Specs y el código. Registra cualquier diferencia sin cambiar requisitos por tu cuenta.» | Informe de desvíos, aunque no haya diferencias. |
+| 1. Contexto | «Lee `LAB.md` y el workspace. Resume hechos, decisiones y preguntas abiertas. No diseñes ni implementes.» | Resumen que identifica un proyecto nuevo sin código. |
+| 2. Brainstorm | «Usa `egm-brainstorm` con `LAB.md`. Evalúa alternativas pequeñas y casos límite. Pregunta solo lo indispensable y guarda un concept brief en `docs/egm/briefs/`. Detente.» | Brief con alcance, decisiones y preguntas abiertas. |
+| 3. Draft | «Usa `egm-draft` con el brief aprobado para producir un diseño autocontenido en `docs/designs/`. Incluye requisitos identificados, decisiones, formato de datos, errores, criterios de aceptación y pruebas. No escribas código.» | Diseño que permite verificar cada función y caso límite. |
+| 4. Review | «Invoca cinco veces a `egm-goldfish` con contexto nuevo: requisitos, arquitectura, seguridad y datos, operaciones, implementación y pruebas. Entrega a cada uno solo el diseño, `LAB.md`, el estándar pertinente y su alcance. Guarda cinco informes distintos en `docs/egm/reviews/`. No corrijas todavía el diseño.» | Cinco invocaciones visibles y cinco informes independientes. |
+| 5. Resolve | «Usa `egm-resolve` para clasificar cada hallazgo como aceptado, rechazado con motivo, aplazado o pendiente. Propón los cambios y actualiza el diseño tras mis decisiones. Detente antes de aprobar.» | Registro de resolución y diseño revisado. |
+| 6. Aprobación | **La persona** lee el diseño revisado y, si está conforme, escribe: «Apruebo el diseño `[ruta]` para este laboratorio». | Aprobación explícita; una respuesta de Goldfish no cuenta. |
+| 7. Kiro Specs | «A partir del diseño aprobado, crea requisitos, diseño y tareas en `.kiro/specs/`. Mapea requisitos a criterios de aceptación y tareas. No implementes aún.» | Specs trazables al diseño. |
+| 8. Implementación | «Implementa una tarea aprobada a la vez. Ejecuta pruebas de los casos de aceptación y reporta archivos y resultados.» | CLI funcional y pruebas con resultados. |
+| 9. Drift | «Usa `egm-drift-report` para comparar el diseño aprobado, los Specs y el código. Registra cualquier diferencia sin cambiar requisitos por tu cuenta.» | Informe de desvíos, aunque no haya diferencias. |
 
 ## 4. Cómo evaluar la conexión
 
