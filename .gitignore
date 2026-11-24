@@ -1,0 +1,19 @@
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# Datos y artefactos de ejecución de la futura CLI
+data/*.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Respaldos creados por el instalador con --force
+.kiro/egm-backups/
+
+# Archivos temporales del editor y del sistema
+*.swp
+*~
+.DS_Store
