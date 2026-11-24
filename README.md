@@ -1,12 +1,14 @@
 # Lab Kiro + EGM
 
-Laboratorio aislado para aprender el flujo Elephant–Goldfish Model en Kiro mediante
-el diseño de una CLI pequeña de tareas. El proyecto empieza sin código de aplicación.
+Este proyecto es un laboratorio aislado para aprender cómo se conectan Kiro y el
+Elephant–Goldfish Model (EGM) al diseñar una pequeña CLI de tareas. Comienza sin
+código de aplicación.
 
-Abre `Lab_KiroEMG/` como único workspace en Kiro IDE. Inicia un chat nuevo y
-comprueba que estén disponibles `egm-elephant` y `egm-goldfish`. Si aparecen
-reglas globales ajenas, revísalas antes de la prueba. Consulta [LAB.md](LAB.md)
-para el objetivo concreto, los mensajes de cada fase y los criterios de evaluación.
+**Para llevar a cabo el laboratorio, sigue [LAB.md](LAB.md) en orden.** Allí están
+el objetivo del ejercicio, la comprobación inicial de los agentes en Kiro IDE y
+CLI, los mensajes de cada fase y las evidencias que debes revisar antes de avanzar.
+Abre `Lab_KiroEMG/` como único workspace en el IDE o trabaja desde su raíz en
+la CLI para mantener el ejercicio aislado.
 
 ## Preparación y verificación
 
@@ -24,6 +26,34 @@ bash scripts/verify-lab-setup.sh
 
 Debe mostrar «Setup EGM local completo». Un clon de este laboratorio puede
 comenzar con esa copia, sin reinstalar EGM.
+
+## Contenido
+
+**Agentes Kiro** (`.kiro/agents/`): `egm-elephant` prepara el contexto y el
+diseño, coordina las fases e invoca a `egm-goldfish`. `egm-goldfish` revisa el
+diseño en una ejecución separada y devuelve hallazgos; no aprueba ni modifica
+el diseño por sí mismo.
+
+**Skills EGM instaladas** (`.kiro/skills/`):
+
+| Skill | Función |
+| --- | --- |
+| `egm-bootstrap` | Documenta el contexto de un proyecto existente. |
+| `egm-brainstorm` | Convierte la idea en un brief de concepto. |
+| `egm-draft` | Redacta el diseño a partir del brief. |
+| `egm-review` | Organiza la revisión independiente del diseño. |
+| `egm-review-loop` | Repite la revisión después de cambios sustanciales. |
+| `egm-resolve` | Clasifica y resuelve hallazgos de revisión. |
+| `egm-lite` | Aplica un recorrido EGM reducido a cambios pequeños. |
+| `egm-drift-report` | Compara diseño y código para informar desvíos. |
+
+**Adaptación Kiro–EGM:** `.kiro/skills/egm-kiro-workflow/` ordena el flujo
+completo para Kiro IDE y CLI; `.kiro/steering/egm-workflow.md` fija las reglas,
+ubicaciones y aprobación humana. `.kiro/egm-upstream/` conserva las personas,
+estándares, documentación y skills originales que se consultan durante el
+proceso. `scripts/install-egm-kiro.sh` instala o actualiza esa copia y adapta
+sus rutas para Kiro; `scripts/verify-lab-setup.sh` comprueba la integridad de
+la instalación incluida.
 
 ## Fuente original y reinstalación
 

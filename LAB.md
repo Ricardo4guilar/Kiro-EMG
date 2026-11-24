@@ -6,6 +6,21 @@ Este documento define el ejercicio de diseño y sus puntos de control. La prepar
 
 Sigue la sección «Preparación y verificación» de [README.md](README.md) y vuelve aquí cuando termine correctamente.
 
+Usa la versión actual de Kiro compatible con los agentes de este lab: **Kiro IDE 1.x** o **Kiro CLI 3.x con el motor V3**. La versión del IDE se llama 1.x; «V3» identifica el motor de agentes de CLI. En CLI fuerza ese motor con `--v3` para evitar abrir una sesión V2. Consulta la [referencia de configuración de agentes](https://kiro.dev/docs/cli/v3/agent-config/) y los [comandos de CLI](https://kiro.dev/docs/cli/reference/cli-commands/).
+
+**En Kiro IDE:** abre únicamente `Lab_KiroEMG/`, inicia un chat nuevo y pulsa el nombre del agente en la barra inferior del chat (por ejemplo, «Default»). Comprueba que el selector muestre `egm-elephant` y `egm-goldfish`; selecciona `egm-elephant` para iniciar el recorrido. [Referencia del selector de agentes](https://kiro.dev/docs/cli/custom-agents/creating/).
+
+**En Kiro CLI:** abre una terminal en la raíz de `Lab_KiroEMG/` y ejecuta:
+
+```bash
+kiro-cli --version
+kiro-cli --v3
+```
+
+Dentro de la sesión V3, ejecuta `/agent list` y comprueba que aparezcan `egm-elephant` y `egm-goldfish`; después ejecuta `/agent swap egm-elephant`. Si no aparecen, confirma que la terminal está en la raíz de este lab y que la sesión usa V3 antes de avanzar. [Referencia de `/agent`](https://kiro.dev/docs/cli/reference/slash-commands/).
+
+En el entorno que vayas a usar, comprueba también la **invocación real**: pide a Elephant «Invoca al subagente `egm-goldfish` para que lea `LAB.md` y devuelva dos restricciones del ejercicio; entrégale solo esa ruta y esa tarea. No modifiques archivos». Verifica en la actividad una llamada a `egm-goldfish` y su respuesta. Que ambos nombres aparezcan en el listado comprueba el descubrimiento; la llamada comprueba la delegación. [Referencia de subagentes](https://kiro.dev/docs/chat/subagents/).
+
 ## 2. Idea fija del laboratorio
 
 **Producto:** herramienta de línea de comandos para gestionar tareas personales en un equipo local.
@@ -47,7 +62,8 @@ En cada fase usa `egm-elephant` en el espacio de trabajo del laboratorio. Da la 
 
 Marca cada punto solo con evidencia observable:
 
-- [ ] Kiro detecta ambos agentes en el workspace aislado.
+- [ ] En el IDE o en una sesión CLI V3, Kiro lista ambos agentes del workspace aislado.
+- [ ] Elephant invoca realmente a Goldfish en el entorno elegido y recibe su respuesta.
 - [ ] La verificación del setup descrita en README termina sin errores.
 - [ ] Elephant encuentra y usa las skills EGM pertinentes.
 - [ ] En Review aparecen cinco llamadas reales a `egm-goldfish`, cada una con su tarea separada.
